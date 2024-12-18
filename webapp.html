@@ -79,17 +79,44 @@
             font-size: 1.1rem;
             color: #555;
         }
+
+        .navigation {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .navigation ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navigation li {
+            display: inline;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #e04875;
+            font-weight: bold;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
     </style>
-    <nav>
-     <div class="vertical-nav">
-            <ul>
-                <li><a href="index.html">Bootstrap Page</a></li>
-                <li><a href="about.html">Scratch Page</a></li>
-            </ul>
-        </div>
-    </nav> 
 </head>
 <body>
+    <div class="navigation">
+        <ul>
+            <li><a href="index.html">Bootstrap Page</a></li>
+            <li><a href="about.html">Scratch Page</a></li>
+        </ul>
+    </div>
     <h1>Mood Playlist Generator</h1>
     <div class="container">
         <label for="mood">Select Your Mood:</label>
