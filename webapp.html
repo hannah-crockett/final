@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Playlist Generator</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f9fc;
+            color: #333;
+            text-align: center;
+            transition: background-color 0.5s ease;
+        }
+
+        h1 {
+            color: #e04875;
+            margin-top: 20px;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 500px;
+        }
+
+        label {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 1rem;
+            margin: 10px 0;
+            border: 2px solid #e04875;
+            border-radius: 5px;
+            background-color: #fff8fc;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #e04875;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c03d61;
+        }
+
+        .playlist {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .playlist h2 {
+            color: #e04875;
+            font-size: 1.8rem;
+        }
+
+        .playlist ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .playlist li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mood Playlist Generator</h1>
+    <div class="container">
+        <label for="mood">Select Your Mood:</label>
+        <select id="mood">
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="energetic">Energetic</option>
+            <option value="relaxed">Relaxed</option>
+        </select>
+        <button onclick="generatePlaylist()">Generate Playlist</button>
+        <div class="playlist" id="playlist"></div>
+    </div>
+
+    <script>
+        function generatePlaylist() {
+            const mood = document.getElementById('mood').value;
+            const playlist = document.getElementById('playlist');
+            const body = document.body;
+
+            const playlists = {
+                happy: [
+                    '"Happy" by Pharrell Williams',
+                    '"Can’t Stop the Feeling!" by Justin Timberlake',
+                    '"Good Vibrations" by The Beach Boys',
+                    '"Dynamite" by BTS'
+                ],
+                sad: [
+                    '"Someone Like You" by Adele',
+                    '"Fix You" by Coldplay',
+                    '"The Night We Met" by Lord Huron',
+                    '"Jealous" by Labrinth'
+                ],
+                energetic: [
+                    '"Eye of the Tiger" by Survivor',
+                    '"Uptown Funk" by Mark Ronson ft. Bruno Mars',
+                    '"Stronger" by Kanye West',
+                    '"We Will Rock You" by Queen'
+                ],
+                relaxed: [
+                    '"Weightless" by Marconi Union',
+                    '"Banana Pancakes" by Jack Johnson',
+                    '"Dreams" by Fleetwood Mac',
+                    '"Come Away With Me" by Norah Jones'
+                ]
+            };
+
+            const moodColors = {
+                happy: '#ffe6f2', // Pink
+                sad: '#cce7ff', // Blue
+                energetic: '#fffacd', // Yellow
+                relaxed: '#d8f3dc' // Green
+            };
+
+            body.style.backgroundColor = moodColors[mood] || '#f4f9fc';
+
+            const selectedPlaylist = playlists[mood] || [];
+
+            playlist.innerHTML = `
+                <h2>Playlist for ${mood.charAt(0).toUpperCase() + mood.slice(1)} Mood:</h2>
+                <ul>
+                    ${selectedPlaylist.map(song => `<li>${song}</li>`).join('')}
+                </ul>
+            `;
+        }
+    </script>
+</body>
+</html>

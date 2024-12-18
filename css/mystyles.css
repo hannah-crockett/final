@@ -1,0 +1,46 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+.site-heading-lower{
+    font-weight: bolder;
+}
+.mb-3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#mainNav{
+    background-color: rgba(245, 245, 220, 0.323);
+}
+p.mb-0 {
+    font-size: 1.25rem; 
+    font-weight: 600; 
+    color: #333; 
+    margin-bottom: 0.5rem; 
+}
+
+ul {
+    list-style-position: outside; 
+    margin-left: 20px; 
+    padding-left: 0; 
+}
+
+ul li {
+    font-size: 0.9rem; 
+    font-weight: 300; 
+    line-height: 1.4; 
+    color: #555; 
+    text-align: left;
+}
+.footer {
+    background-color: #dfdfdf50; /* Dark background color */
+    color: #fff !important; /* White text color */
+    padding: 20px 0; /* Adds spacing inside the footer */
+    text-align: center; /* Ensures text is centered */
+}
+
+.footer p {
+    margin: 0; /* Removes default margin on paragraphs */
+    font-size: 0.9rem; /* Adjust the text size if needed */
+}

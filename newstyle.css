@@ -1,0 +1,211 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdeef4; /* Light pink background */
+    color: #5e2750; /* Mauve-ish pink font color */
+    text-align: center;
+}
+
+/* Header Section */
+.header {
+    background-color: #e04875; /* Dark mauve-pink header */
+    color: #fff;
+    padding: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0 0;
+}
+
+/* Navigation Buttons */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center buttons */
+    gap: 20px; /* Space between buttons */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #e04875; /* Pink buttons */
+    color: #fdeef4; /* Light pink text */
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded rectangles */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav a:hover {
+    background-color: #fdeef4; /* Invert hover color */
+    color: #e04875;
+}
+
+/* Top-Right Vertical Navigation Bar */
+.vertical-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff8fc;
+    border: 2px solid #e04875;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.vertical-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vertical-nav ul li {
+    margin: 10px 0; /* Space between items */
+}
+
+.vertical-nav a {
+    text-decoration: none;
+    color: #5e2750;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.vertical-nav a:hover {
+    color: #e04875;
+}
+
+/* Section Styling */
+.section {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff8fc; /* Very light pink for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+}
+.section h2 {
+    color: #e04875; /* Mauve pink headings */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+/* Vinyl Categories (Pop, Rock n Roll, Soundtracks) */
+.vinyl-categories {
+    display: flex; /* Align categories horizontally */
+    justify-content: space-around; /* Space them evenly */
+    margin: 20px 0;
+    text-align: left; /* Align text inside each category to the left */
+}
+
+/* Category Headings */
+.vinyl-categories > div h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5e2750; /* Dark mauve for categories */
+    margin-bottom: 10px;
+}
+
+/* Vinyl Descriptions (Smaller, Lighter) */
+.vinyl-categories > div ul {
+    list-style-position: inside; /* Keep bullets aligned inside the block */
+    font-size: 1rem; /* Match concert list font size */
+    font-weight: normal; /* Lighter font weight */
+    color: #7a4b69; /* Softer mauve color */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Concert List Styling */
+.concert-list {
+    display: flex; /* Align concert lists horizontally */
+    justify-content: space-around; /* Space halves evenly */
+}
+
+.concert-half {
+    text-align: left; /* Align text in each column */
+    width: 45%; /* Halves take equal width */
+}
+
+.concert-half ul {
+    list-style-position: inside; /* Align bullets closer to text */
+    font-size: 1rem;
+    font-weight: normal; /* Lighter weight */
+    color: #7a4b69; /* Softer mauve */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Image Styling (Smaller Concert Images) */
+.concert-image {
+    width: 100%;
+    max-width: 150px; /* Smaller images */
+    border: 10px solid #e04875; /* Larger mauve border */
+    border-radius: 12px; /* Rounded corners */
+    margin: 50px; /* Padding between images */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Add Padding Between Video and Footer */
+.video-section {
+    margin-bottom: 40px;
+}
+.video-section h2 {
+    color: #e04875; /* Mauve pink headings */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Adjust the size of the YouTube video */
+.video-container {
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 40%; /* Adjust the vertical height */
+    height: 0;
+    overflow: hidden;
+    max-width: 60%; /* Reduce horizontal width */
+    border: 5px solid #e04875; /* Mauve border */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #e04875; /* Mauve footer */
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
